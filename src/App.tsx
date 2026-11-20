@@ -1,31 +1,9 @@
-import { Routes, Route, Navigate, createBrowserRouter } from 'react-router';
+import { Routes, Route, Navigate } from 'react-router';
 import Login from "./pages/Login";
 import HomeAluno from "./pages/aluno/HomeAluno";
 import NovaDuvida from "./pages/aluno/NovaDuvida";
 import HomeProfessor from "./pages/professor/HomeProfessor";
 import ProtectRoute from "./components/ProtectRoute";
-import ProfessorLayout from './layouts/ProfessorLayout';
-import AlunoLayout from './layouts/AlunoLayout';
-
-const router = createBrowserRouter([
-    // { path: "/", element: <Navigate to="/aluno" replace /> },
-    {
-        path: "/professor",
-        element: <ProfessorLayout />,
-        children: [
-            // { index: true, element: <MeusConteudos /> },
-            // { path: "adicionar", element: <AdicionarConteudo /> },
-        ],
-    },
-    {
-        path: "/aluno",
-        element: <AlunoLayout />,
-        children: [
-            // { index: true, element: <EscolherDisciplina /> },
-            // { path: ":disciplinaId/chat/:chatId", element: <Chat /> },
-        ],
-    },
-]);
 
 function App() {
     return (
